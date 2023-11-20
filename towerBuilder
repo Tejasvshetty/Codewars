@@ -1,0 +1,12 @@
+function towerBuilder(nFloors) {
+  if(nFloors == 1){
+    return ['*'];
+  }
+  else {
+    let pyramid = []
+    for (let i = 1; i<=nFloors; i++){
+      pyramid.push(`${' '.repeat(nFloors-(2*i)/2)}${'*'.repeat(2*i-1)}${' '.repeat(nFloors-(2*i)/2)}`)
+    }
+    return pyramid
+  }
+}
