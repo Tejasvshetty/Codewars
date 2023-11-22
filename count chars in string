@@ -1,0 +1,15 @@
+function count(string) {
+    let frequency ={}
+    for (const char of string){
+       if (!(char in frequency)){
+         let count = 0
+         for (const char2 of string){
+            if (char2 == char){
+              count += 1
+            }
+        }  
+        frequency[char]=count
+  }
+  }
+  return frequency
+}
