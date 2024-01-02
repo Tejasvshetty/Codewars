@@ -1,7 +1,3 @@
-array1 = [[[],[]]]
-array2 = [[[],[]]]
-// [[[],[]]] same as [[[],[]]]: expected false to be true
-
 function toCheck(array1, array2){
     // console.log(array1)
     // console.log(array1.length)
@@ -62,10 +58,14 @@ function toCheck(array1, array2){
     }
 
 Array.prototype.sameStructureAs = function (other) {
+    try{
+        if (check == false){
+            delete check
+        }
+    }
+    catch(err){
+    }
     return (toCheck(this,other))
 }
-    
-console.log(([[[],[]]]).sameStructureAs([[[],[]]]))
-console.log(([ 1, [ 1, 1 ] ]).sameStructureAs([ [ 2, 2 ], 2 ]))
 
 
